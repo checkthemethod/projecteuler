@@ -3,15 +3,15 @@
 //What is the largest prime factor of the number 600851475143 ?
 
 
-console.log('Exercise 3 - Highest prime number is: '+findPrimeVersion(600851475143));
+console.log('Exercise 3 - Highest prime number is: ' +
+    findPrimeVersion(600851475143));
 
 function findPrimeVersion(_startNum) {
-	var solution = _startNum;
-	for(i=2; i < solution; i++) {
-		if(solution%i == 0) {
-			solution = findPrimeVersion(solution/i);
-		}
-	}
-	return solution;
+    var solution = _startNum;
+    for (i = 2; i < solution; i++) {
+        if (solution % i == 0) {
+            solution = findPrimeVersion(solution / i);
+        }
+    }
+    return solution;
 }
-
